@@ -293,6 +293,13 @@
     .fromTo(".name__word .n", { opacity: 0, xPercent: 40 }, { opacity: 1, xPercent: 0, duration: 0.4, ease: "expo.out" }, "-=.2");
   gsap.from(".name__copy p", { y: 40, opacity: 0, stagger: 0.15, duration: 1.1, ease: "expo.out", scrollTrigger: { trigger: ".name__copy", start: "top 85%" } });
 
+  /* ── founders duo ── */
+  gsap.utils.toArray(".person").forEach((p, i) => {
+    gsap.fromTo(p.querySelector(".person__img"), { clipPath: "inset(100% 0 0 0)" }, { clipPath: "inset(0% 0 0 0)", duration: 1.4, ease: "expo.inOut", delay: i * 0.15, scrollTrigger: { trigger: p, start: "top 85%" } });
+    gsap.fromTo(p.querySelector("img"), { yPercent: -8 }, { yPercent: 0, ease: "none", scrollTrigger: { trigger: p, start: "top bottom", end: "bottom top", scrub: true } });
+    gsap.from(p.querySelectorAll("figcaption > *"), { y: 24, opacity: 0, stagger: 0.08, duration: 1, ease: "expo.out", scrollTrigger: { trigger: p.querySelector("figcaption"), start: "top 92%" } });
+  });
+
   /* ── founder ── */
   const fv = document.querySelector(".founder__bg");
   ScrollTrigger.create({
