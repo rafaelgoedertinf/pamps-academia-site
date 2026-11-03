@@ -345,6 +345,10 @@ em{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:0;f
 .foot__row{padding-right:90px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-top:28px;font-size:13px;color:var(--mute)}
 .foot__row a:hover{color:var(--volt)}
 
+.dev{display:inline-flex;align-items:center;gap:7px;margin-top:22px;font-size:11px;line-height:1;color:var(--bone-2);opacity:.6;transition:opacity .3s}
+.dev:hover{opacity:1}
+.dev img{height:16px;width:auto}
+
 /* ───────── WA FLOAT ───────── */
 .wa-float{
   position:fixed;right:clamp(16px,2.4vw,32px);bottom:clamp(16px,2.4vw,32px);z-index:70;
