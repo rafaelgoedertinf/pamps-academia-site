@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Página não encontrada · Pamp's Academia</title>
+<script>
+  // Rotas do painel (/admin/...) voltam para o app, que restaura a rota.
+  if (location.pathname.indexOf("/admin") === 0) {
+    location.replace("/admin/?r=" + encodeURIComponent(location.pathname + location.search));
+  }
+</script>
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<style>
+  html,body{margin:0;height:100%;background:#0a0a0a;color:#eceae4;font-family:system-ui,sans-serif}
+  main{min-height:100%;display:grid;place-items:center;text-align:center;padding:24px}
+  h1{font-size:clamp(40px,8vw,88px);margin:0;letter-spacing:-.03em}
+  p{color:#b9b7b0}
+  a{display:inline-block;margin-top:18px;background:#f1d71b;color:#0a0a0a;padding:14px 24px;border-radius:100px;text-decoration:none;font-weight:700;text-transform:uppercase;letter-spacing:.06em;font-size:14px}
+</style>
+</head>
+<body><main><div><h1>404</h1><p>Essa página não existe. Mas o seu treino, sim.</p><a href="/">Voltar ao site</a></div></main></body>
+</html>

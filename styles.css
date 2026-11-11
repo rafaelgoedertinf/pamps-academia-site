@@ -474,3 +474,27 @@ em{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:0;f
 }
 @media (max-width:760px){.hero__title{font-size:clamp(34px,10.4vw,60px)}.hero__title .line{white-space:normal}}
 @media (max-width:760px){.hero__scroll{display:none!important}.wa-big small{letter-spacing:.1em}}
+
+/* ───────── FORMULÁRIO DE CONTATO ───────── */
+html.ct-aberto{overflow:hidden}
+.ct{position:fixed;inset:0;z-index:95;display:grid;place-items:center;padding:16px}
+.ct[hidden],.ct [hidden]{display:none!important}
+.ct__fundo{position:absolute;inset:0;background:rgba(5,5,5,.78);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);opacity:0;transition:opacity .3s}
+.ct__caixa{position:relative;width:min(520px,100%);max-height:calc(100svh - 32px);overflow:auto;background:var(--coal);border:1px solid var(--line);padding:clamp(26px,4vw,44px);transform:translateY(24px);opacity:0;transition:transform .45s var(--ease),opacity .3s}
+.ct.on .ct__fundo{opacity:1}
+.ct.on .ct__caixa{transform:none;opacity:1}
+.ct__x{position:absolute;top:10px;right:14px;font-size:30px;line-height:1;color:var(--bone-2);padding:6px}
+.ct__x:hover{color:var(--volt)}
+.ct__k{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--volt);margin-bottom:12px}
+.ct__t{font-weight:850;font-variation-settings:"wdth" 125;text-transform:uppercase;font-size:clamp(26px,3.4vw,36px);line-height:.98;letter-spacing:-.02em}
+.ct__t em{color:var(--volt);text-transform:none;font-size:1.1em}
+.ct__s{color:var(--bone-2);margin:14px 0 22px;font-size:15px}
+.ct__c{display:block;margin-bottom:14px}
+.ct__c span{display:block;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--bone-2);margin-bottom:6px}
+.ct__c input,.ct__c textarea{width:100%;background:var(--ink);border:1px solid var(--line);color:var(--bone);font:inherit;font-size:16px;padding:12px 14px;border-radius:2px;resize:vertical}
+.ct__c input:focus,.ct__c textarea:focus{outline:none;border-color:var(--volt)}
+.ct__erro{min-height:20px;color:#ff8a7a;font-size:14px;margin:2px 0 10px}
+.ct__env{width:100%;justify-content:center;border:0;cursor:pointer}
+.ct__env:disabled{opacity:.6;cursor:wait}
+.ct__priv{margin-top:12px;font-size:12px;color:var(--mute);text-align:center}
+.ct__ok .btn{margin-top:4px}

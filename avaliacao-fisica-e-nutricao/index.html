@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/styles.css?v=7">
+<link rel="stylesheet" href="/styles.css?v=9">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Como agendar uma avaliação física ou atendimento nutricional?", "acceptedAnswer": {"@type": "Answer", "text": "Fale com a recepção pelo WhatsApp (47) 3332-5868 ou pessoalmente. A equipe explica como funciona e os horários disponíveis."}}, {"@type": "Question", "name": "Quem cuida da parte de nutrição?", "acceptedAnswer": {"@type": "Answer", "text": "A Pamp's tem sala de nutrição própria, e o fundador Alexandre Pamplona é nutricionista e educador físico. A recepção informa como funciona o atendimento."}}, {"@type": "Question", "name": "Preciso ser aluno para fazer a avaliação?", "acceptedAnswer": {"@type": "Answer", "text": "Consulte a recepção — eles explicam as opções disponíveis para alunos e não alunos."}}, {"@type": "Question", "name": "Onde fica a Pamp's?", "acceptedAnswer": {"@type": "Answer", "text": "Na Rua Prefeito Leopoldo Schramm, 64, bairro Coloninha, em Gaspar (SC). Seg a sex das 5h às 22h e sábados das 8h30 às 11h30."}}]}</script>
 </head>
 <body class="sp" id="top">
@@ -60,7 +60,7 @@
     <a href="/#metodo">Método</a>
     <a href="/#contato">Contato</a>
   </nav>
-  <a class="nav__cta" href="#" data-wa>Fale com a gente <span>↗</span></a>
+  <a class="nav__cta" href="#" data-form>Fale com a gente <span>↗</span></a>
 </header>
 <main>
   <section class="sp-hero">
@@ -70,7 +70,7 @@
       <h1 class="h1">Avaliação física e nutrição.<br><em>O treino começa pelo diagnóstico.</em></h1>
       <p class="sp-lead">Salas dedicadas para medir, orientar e ajustar a rota do seu treino — com uma visão que une educação física e nutrição.</p>
       <div class="hero__actions" style="opacity:1;transform:none;justify-content:flex-start">
-        <a class="btn btn--volt" href="#" data-wa><span>Falar com a recepção</span><b>↗</b></a>
+        <a class="btn btn--volt" href="#" data-form><span>Falar com a recepção</span><b>↗</b></a>
         <a class="btn btn--ghost" href="/#estrutura"><span>Ver a estrutura</span></a>
       </div>
     </div>
@@ -144,5 +144,6 @@ document.querySelectorAll("[data-wa]").forEach(function(a){a.href=u;a.target="_b
 document.querySelectorAll("[data-curyear]").forEach(function(e){e.textContent=new Date().getFullYear()});
 var f=document.querySelector(".wa-float");f&&f.classList.add("is-in");})();
 </script>
+<script src="/assets/contato.js?v=1" defer></script>
 </body>
 </html>
