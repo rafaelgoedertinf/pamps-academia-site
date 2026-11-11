@@ -1,0 +1,1 @@
+import{t as s}from"./pt-BR-BAhEORpS.js";function c(t,n){const o=s(t),e=s(n),r=o.getTime()-e.getTime();return r<0?-1:r>0?1:r}function i(t){return n=>{const e=(t?Math[t]:Math.trunc)(n);return e===0?0:e}}export{c,i as g};

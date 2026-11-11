@@ -1,0 +1,22 @@
+{
+  "name": "Pamp's Academia · Painel",
+  "short_name": "Pamp's",
+  "description": "Conversas do WhatsApp, leads e agenda da Pamp's Academia.",
+  "id": "/admin/",
+  "start_url": "/admin/",
+  "scope": "/admin/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0A0A0A",
+  "theme_color": "#0A0A0A",
+  "lang": "pt-BR",
+  "icons": [
+    { "src": "/admin/app/icone-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/admin/app/icone-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/admin/app/icone-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Conversas", "url": "/admin/conversas", "icons": [{ "src": "/admin/app/icone-192.png", "sizes": "192x192" }] },
+    { "name": "Agenda", "url": "/admin/agenda", "icons": [{ "src": "/admin/app/icone-192.png", "sizes": "192x192" }] }
+  ]
+}
