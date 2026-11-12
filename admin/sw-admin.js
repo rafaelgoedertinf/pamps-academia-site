@@ -7,6 +7,10 @@ self.addEventListener("push", (e) => {
   let d = {};
   try { d = e.data ? e.data.json() : {}; } catch { d = { corpo: e.data && e.data.text() }; }
   const titulo = d.titulo || "Pamp's";
+  // Número de não lidas no ícone do aplicativo (iPhone e computador; no Android aparece o ponto da notificação).
+  if (typeof d.naoLidas === "number" && self.navigator.setAppBadge) {
+    (d.naoLidas > 0 ? self.navigator.setAppBadge(d.naoLidas) : self.navigator.clearAppBadge()).catch(() => {});
+  }
   e.waitUntil(self.registration.showNotification(titulo, {
     body: d.corpo || "Nova mensagem",
     tag: d.tag || undefined,
