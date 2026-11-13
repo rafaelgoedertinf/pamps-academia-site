@@ -1,0 +1,1 @@
+import{t as s}from"./pt-BR-DR8jkaIN.js";function f(e,n){const r=s(e),t=s(n),o=r.getTime()-t.getTime();return o<0?-1:o>0?1:o}function u(e,n){const r=s(e),t=s(n),o=r.getFullYear()-t.getFullYear(),a=r.getMonth()-t.getMonth();return o*12+a}function i(e){return n=>{const t=(e?Math[e]:Math.trunc)(n);return t===0?0:t}}export{f as c,u as d,i as g};
