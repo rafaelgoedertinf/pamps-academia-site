@@ -312,6 +312,14 @@
   /* ── timeline ── */
   const yearBox = document.querySelector(".story__year span");
   let currentYear = yearBox.textContent;
+  // palavras longas (Londres) encolhem para caber na coluna, sem cortar
+  const fitYear = () => {
+    yearBox.style.fontSize = "";
+    const w = yearBox.parentElement.clientWidth, sw = yearBox.scrollWidth;
+    if (w && sw > w) yearBox.style.fontSize = (parseFloat(getComputedStyle(yearBox).fontSize) * w / sw * 0.97) + "px";
+  };
+  fitYear();
+  window.addEventListener("resize", fitYear);
   document.querySelectorAll(".story__list li").forEach((li) => {
     const m = document.createElement("span");
     m.className = "yr-m";
@@ -326,7 +334,7 @@
           const dirUp = self.direction > 0;
           gsap.timeline()
             .to(yearBox, { yPercent: dirUp ? -100 : 100, opacity: 0, duration: 0.25, ease: "power2.in" })
-            .add(() => (yearBox.textContent = currentYear))
+            .add(() => { yearBox.textContent = currentYear; fitYear(); })
             .fromTo(yearBox, { yPercent: dirUp ? 100 : -100, opacity: 0 }, { yPercent: 0, opacity: 1, duration: 0.5, ease: "expo.out" });
         }
       },
